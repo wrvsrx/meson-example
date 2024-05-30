@@ -6,9 +6,14 @@ project(
   default_options: ['cpp_std=c++20'],
 )
 
+# search for eigen as dependency
+eigen = dependency('eigen3')
+
 executable(
   # execuatable name
   'main',
   # source files
   'main.cpp',
+  # dependencies
+  dependencies: [eigen],
 )
